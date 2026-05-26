@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Nicholas Hutchison"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects/arbitration.qmd
+        text: Arbitration Research
+      - href: projects/pitcher-reports.qmd
+        text: Pitch Reports
+      - href: resume.qmd
+        text: Resume
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme: litera
+    toc: true

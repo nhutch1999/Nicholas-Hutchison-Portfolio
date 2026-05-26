@@ -1,0 +1,79 @@
+---
+title: "TrackMan Scouting & Development Reports"
+---
+
+## Overview
+
+These reports were developed using TrackMan data and R to support pitcher evaluation and development.
+
+The goal is to combine pitch characteristics, movement profiles, contact quality, and advanced metrics into coach-facing player reports.
+
+## Metrics Included
+
+### Pitch Characteristics
+
+- Velocity
+- Spin Rate
+- IVB
+- Horizontal Break
+- Extension
+- Release Height
+- Release Side
+
+### Swing & Miss
+
+- Strike%
+- CSW%
+- Whiff%
+- Chase%
+- Swing%
+
+### Contact Quality
+
+- Exit Velocity
+- Launch Angle
+- xwOBACON
+- Run Value
+
+### Advanced Development Metrics
+
+- Height-adjusted VAA
+- Release consistency
+- Pitch tunneling proxies
+- Movement profiles
+
+## Example Player Report
+
+This sample report combines movement profiles, velocity distributions, release consistency, VAA analysis, contact quality, and run value metrics into a player development summary.
+
+Player-identifying information has been removed.
+
+
+[Download Sample Report](../files/Trackman-Pitcher-Report-Sample.pdf)
+
+
+## Future Development
+
+Planned additions:
+
+- Automated report generation
+- Pitch sequencing analysis
+- Markov decision models
+
+## Technical Stack
+
+**Languages & Tools**
+
+- R
+- Quarto
+- TrackMan
+
+**Packages**
+
+- dplyr
+- ggplot2
+- gt
+- tidyr
+- purrr
+
+---

@@ -1,0 +1,82 @@
+---
+title: "MLB Arbitration OLS Model"
+---
+
+## Research Question
+
+What drives first-year MLB arbitration salaries for starting pitchers?
+
+## Project Overview
+
+This project uses arbitration salary data and pitching performance metrics to estimate which factors most influence first-year arbitration salaries.
+
+The goal is to connect econometric modeling with a real baseball operations question: how players are valued during the arbitration process.
+
+## Data
+
+- Salary data: Spotrac
+- Performance data: Fangraphs / Statcast
+- Sample: First-year arbitration and Super Two starting pitchers
+- Years: 2016–2026
+- Observations: 124 pitchers
+
+## Model
+
+I estimated an OLS regression using log salary as the dependent variable.
+
+Independent variables included:
+
+- Innings Pitched (IP)
+- Strikeout Rate (K%)
+- Walk Rate (BB%)
+- ERA
+- Year fixed effects
+
+The logarithmic specification allows coefficients to be interpreted approximately as percentage changes in salary and helps address right-skewness in arbitration salary distributions.
+
+The model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences.
+
+## Regression Specification
+
+log(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ
+
+## Key Findings
+
+- Workload was strongly rewarded in arbitration.
+- 10 additional innings pitched were associated with roughly a 5.8% increase in salary.
+- ERA remained highly influential.
+- One additional run of ERA was associated with roughly an 11% decrease in salary.
+- Strikeout rate showed moderate evidence of positive salary impact.
+- The model underpredicted elite performers such as Shane Bieber, Corbin Burnes, and Hunter Brown.
+
+## Baseball Interpretation
+
+The results suggest that first-year arbitration salaries still reward traditional indicators such as innings pitched and ERA.
+
+This matters because arbitration is not just a pure projection system. It reflects performance, precedent, role, reputation, and comparable-player arguments.
+
+## Limitations
+
+Important omitted variables may include:
+
+- WAR
+- Awards
+- Injuries
+- Role changes
+- Reputation
+- Comparable-player effects
+- Team/player negotiation context
+
+## Next Steps
+
+Future versions of this project could:
+
+- Add WAR and advanced metrics
+- Compare traditional vs modern statistics
+- Use LASSO to evaluate variable selection
+- Analyze residuals to identify overpaid and underpaid arbitration cases
+- Build comparable-player groups
+
+## Full Presentation
+
+## [Download Full Presentation](../files/Arbitration-Presentation.pdf)

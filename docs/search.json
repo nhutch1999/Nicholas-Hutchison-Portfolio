@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nicholas Hutchison",
+    "section": "",
+    "text": "I build baseball analytics tools and research projects focused on player evaluation, pitcher development, and decision-making using R, econometrics, and TrackMan data."
+  },
+  {
+    "objectID": "index.html#data-science-economics-rutgers-baseball-analytics",
+    "href": "index.html#data-science-economics-rutgers-baseball-analytics",
+    "title": "Nicholas Hutchison",
+    "section": "",
+    "text": "I build baseball analytics tools and research projects focused on player evaluation, pitcher development, and decision-making using R, econometrics, and TrackMan data."
+  },
+  {
+    "objectID": "index.html#areas-of-focus",
+    "href": "index.html#areas-of-focus",
+    "title": "Nicholas Hutchison",
+    "section": "Areas of Focus:",
+    "text": "Areas of Focus:\n\nBaseball Operations & R&D\nPitcher development\nEconometrics\nSalary arbitration research\nTrackMan analytics\nPlayer evaluation"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Nicholas Hutchison",
+    "section": "Featured Projects",
+    "text": "Featured Projects\n\nMLB Arbitration Salary Model\nEconometric model studying what drives first-year arbitration salaries for starting pitchers.\nView Project\n\n\n\nTrackman Scouting & Development Reports\nAutomated pitcher reports using TrackMan data, including movement, velocity, spin, release consistency, run value, and contact quality."
+  },
+  {
+    "objectID": "index.html#view-project",
+    "href": "index.html#view-project",
+    "title": "Nicholas Hutchison",
+    "section": "View Project",
+    "text": "View Project"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "projects/arbitration.html",
+    "href": "projects/arbitration.html",
+    "title": "MLB Arbitration OLS Model",
+    "section": "",
+    "text": "What drives first-year MLB arbitration salaries for starting pitchers?"
+  },
+  {
+    "objectID": "projects/arbitration.html#research-question",
+    "href": "projects/arbitration.html#research-question",
+    "title": "MLB Arbitration OLS Model",
+    "section": "",
+    "text": "What drives first-year MLB arbitration salaries for starting pitchers?"
+  },
+  {
+    "objectID": "projects/arbitration.html#project-overview",
+    "href": "projects/arbitration.html#project-overview",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Project Overview",
+    "text": "Project Overview\nThis project uses arbitration salary data and pitching performance metrics to estimate which factors most influence first-year arbitration salaries.\nThe goal is to connect econometric modeling with a real baseball operations question: how players are valued during the arbitration process."
+  },
+  {
+    "objectID": "projects/arbitration.html#data",
+    "href": "projects/arbitration.html#data",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Data",
+    "text": "Data\n\nSalary data: Spotrac\nPerformance data: Fangraphs / Statcast\nSample: First-year arbitration and Super Two starting pitchers\nYears: 2016–2026\nObservations: 124 pitchers"
+  },
+  {
+    "objectID": "projects/arbitration.html#model",
+    "href": "projects/arbitration.html#model",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Model",
+    "text": "Model\nI estimated an OLS regression using log salary as the dependent variable.\nIndependent variables included:\n\nInnings Pitched (IP)\nStrikeout Rate (K%)\nWalk Rate (BB%)\nERA\nYear fixed effects\n\nThe logarithmic specification allows coefficients to be interpreted approximately as percentage changes in salary and helps address right-skewness in arbitration salary distributions.\nThe model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences."
+  },
+  {
+    "objectID": "projects/arbitration.html#key-findings",
+    "href": "projects/arbitration.html#key-findings",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nWorkload was strongly rewarded in arbitration.\n10 additional innings pitched were associated with roughly a 5.8% increase in salary.\nERA remained highly influential.\nOne additional run of ERA was associated with roughly an 11% decrease in salary.\nStrikeout rate showed moderate evidence of positive salary impact.\nThe model underpredicted elite performers such as Shane Bieber, Corbin Burnes, and Hunter Brown."
+  },
+  {
+    "objectID": "projects/arbitration.html#baseball-interpretation",
+    "href": "projects/arbitration.html#baseball-interpretation",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Baseball Interpretation",
+    "text": "Baseball Interpretation\nThe results suggest that first-year arbitration salaries still reward traditional indicators such as innings pitched and ERA.\nThis matters because arbitration is not just a pure projection system. It reflects performance, precedent, role, reputation, and comparable-player arguments."
+  },
+  {
+    "objectID": "projects/arbitration.html#limitations",
+    "href": "projects/arbitration.html#limitations",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Limitations",
+    "text": "Limitations\nImportant omitted variables may include:\n\nWAR\nAwards\nInjuries\nRole changes\nReputation\nComparable-player effects\nTeam/player negotiation context"
+  },
+  {
+    "objectID": "projects/arbitration.html#next-steps",
+    "href": "projects/arbitration.html#next-steps",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Next Steps",
+    "text": "Next Steps\nFuture versions of this project could:\n\nAdd WAR and advanced metrics\nCompare traditional vs modern statistics\nUse LASSO to evaluate variable selection\nAnalyze residuals to identify overpaid and underpaid arbitration cases\nBuild comparable-player groups"
+  },
+  {
+    "objectID": "projects/arbitration.html#full-presentation",
+    "href": "projects/arbitration.html#full-presentation",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Full Presentation",
+    "text": "Full Presentation"
+  },
+  {
+    "objectID": "projects/arbitration.html#download-full-presentation",
+    "href": "projects/arbitration.html#download-full-presentation",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Download Full Presentation",
+    "text": "Download Full Presentation"
+  },
+  {
+    "objectID": "projects/pitcher-reports.html",
+    "href": "projects/pitcher-reports.html",
+    "title": "TrackMan Scouting & Development Reports",
+    "section": "",
+    "text": "These reports were developed using TrackMan data and R to support pitcher evaluation and development.\nThe goal is to combine pitch characteristics, movement profiles, contact quality, and advanced metrics into coach-facing player reports."
+  },
+  {
+    "objectID": "projects/pitcher-reports.html#overview",
+    "href": "projects/pitcher-reports.html#overview",
+    "title": "TrackMan Scouting & Development Reports",
+    "section": "",
+    "text": "These reports were developed using TrackMan data and R to support pitcher evaluation and development.\nThe goal is to combine pitch characteristics, movement profiles, contact quality, and advanced metrics into coach-facing player reports."
+  },
+  {
+    "objectID": "projects/pitcher-reports.html#metrics-included",
+    "href": "projects/pitcher-reports.html#metrics-included",
+    "title": "TrackMan Scouting & Development Reports",
+    "section": "Metrics Included",
+    "text": "Metrics Included\n\nPitch Characteristics\n\nVelocity\nSpin Rate\nIVB\nHorizontal Break\nExtension\nRelease Height\nRelease Side\n\n\n\nSwing & Miss\n\nStrike%\nCSW%\nWhiff%\nChase%\nSwing%\n\n\n\nContact Quality\n\nExit Velocity\nLaunch Angle\nxwOBACON\nRun Value\n\n\n\nAdvanced Development Metrics\n\nHeight-adjusted VAA\nRelease consistency\nPitch tunneling proxies\nMovement profiles"
+  },
+  {
+    "objectID": "projects/pitcher-reports.html#example-player-report",
+    "href": "projects/pitcher-reports.html#example-player-report",
+    "title": "TrackMan Scouting & Development Reports",
+    "section": "Example Player Report",
+    "text": "Example Player Report\nThis sample report combines movement profiles, velocity distributions, release consistency, VAA analysis, contact quality, and run value metrics into a player development summary.\nPlayer-identifying information has been removed.\nDownload Sample Report"
+  },
+  {
+    "objectID": "projects/pitcher-reports.html#future-development",
+    "href": "projects/pitcher-reports.html#future-development",
+    "title": "TrackMan Scouting & Development Reports",
+    "section": "Future Development",
+    "text": "Future Development\nPlanned additions:\n\nAutomated report generation\nPitch sequencing analysis\nMarkov decision models"
+  },
+  {
+    "objectID": "projects/pitcher-reports.html#technical-stack",
+    "href": "projects/pitcher-reports.html#technical-stack",
+    "title": "TrackMan Scouting & Development Reports",
+    "section": "Technical Stack",
+    "text": "Technical Stack\nLanguages & Tools\n\nR\nQuarto\nTrackMan\n\nPackages\n\ndplyr\nggplot2\ngt\ntidyr\npurrr"
+  },
+  {
+    "objectID": "projects/arbitration.html#regression-specification",
+    "href": "projects/arbitration.html#regression-specification",
+    "title": "MLB Arbitration OLS Model",
+    "section": "Regression Specification",
+    "text": "Regression Specification\nlog(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ"
+  }
+]
