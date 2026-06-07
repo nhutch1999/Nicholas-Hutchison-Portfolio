@@ -7,41 +7,6 @@
     "text": "Data Science + Economics | Rutgers Baseball Analytics\nI build baseball analytics tools and research projects focused on player evaluation, pitcher development, and decision-making using R, econometrics, and TrackMan data.\nAreas of Focus:\n\nBaseball Operations & R&D\nPitcher development\nEconometrics\nSalary arbitration research\nTrackMan analytics\nPlayer evaluation\n\nFeatured Projects\nMLB Arbitration Salary Model\nEconometric model studying what drives first-year arbitration salaries for starting pitchers.\nView Project\n\nTrackman Scouting & Development Reports\nAutomated pitcher reports using TrackMan data, including movement, velocity, spin, release consistency, run value, and contact quality.\nView Project"
   },
   {
-    "objectID": "index.html#data-science-economics-rutgers-baseball-analytics",
-    "href": "index.html#data-science-economics-rutgers-baseball-analytics",
-    "title": "Nicholas Hutchison",
-    "section": "",
-    "text": "I build baseball analytics tools and research projects focused on player evaluation, pitcher development, and decision-making using R, econometrics, and TrackMan data."
-  },
-  {
-    "objectID": "index.html#areas-of-focus",
-    "href": "index.html#areas-of-focus",
-    "title": "Nicholas Hutchison",
-    "section": "Areas of Focus:",
-    "text": "Areas of Focus:\n\nBaseball Operations & R&D\nPitcher development\nEconometrics\nSalary arbitration research\nTrackMan analytics\nPlayer evaluation"
-  },
-  {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
-    "title": "Nicholas Hutchison",
-    "section": "Featured Projects",
-    "text": "Featured Projects\n\nMLB Arbitration Salary Model\nEconometric model studying what drives first-year arbitration salaries for starting pitchers.\nView Project\n\n\n\nTrackman Scouting & Development Reports\nAutomated pitcher reports using TrackMan data, including movement, velocity, spin, release consistency, run value, and contact quality."
-  },
-  {
-    "objectID": "index.html#view-project",
-    "href": "index.html#view-project",
-    "title": "Nicholas Hutchison",
-    "section": "View Project",
-    "text": "View Project"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "projects/arbitration.html",
     "href": "projects/arbitration.html",
     "title": "MLB Arbitration Salary Analysis",
@@ -70,32 +35,46 @@
     "text": "Data\n\nSalary data: Spotrac\nPerformance data: Fangraphs / Statcast\nSample: First-year arbitration and Super Two starting pitchers\nYears: 2016–2026\nObservations: 124 pitchers"
   },
   {
-    "objectID": "projects/arbitration.html#model",
-    "href": "projects/arbitration.html#model",
-    "title": "MLB Arbitration OLS Model",
-    "section": "Model",
-    "text": "Model\nI estimated an OLS regression using log salary as the dependent variable.\nIndependent variables included:\n\nInnings Pitched (IP)\nStrikeout Rate (K%)\nWalk Rate (BB%)\nERA\nYear fixed effects\n\nThe logarithmic specification allows coefficients to be interpreted approximately as percentage changes in salary and helps address right-skewness in arbitration salary distributions.\nThe model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences."
+    "objectID": "projects/arbitration.html#sample-summary",
+    "href": "projects/arbitration.html#sample-summary",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Sample Summary",
+    "text": "Sample Summary\n\n124 first-year arbitration and Super-Two starting pitchers.\nSalary range: approximately $800K-$8M+.\nAverage Salary: $2.89M\nAverage Innings Pitched: 132.1\nAverage ERA: 3.96"
   },
   {
-    "objectID": "projects/arbitration.html#key-findings",
-    "href": "projects/arbitration.html#key-findings",
-    "title": "MLB Arbitration OLS Model",
-    "section": "Key Findings",
-    "text": "Key Findings\n\nWorkload was strongly rewarded in arbitration.\n10 additional innings pitched were associated with roughly a 5.8% increase in salary.\nERA remained highly influential.\nOne additional run of ERA was associated with roughly an 11% decrease in salary.\nStrikeout rate showed moderate evidence of positive salary impact.\nThe model underpredicted elite performers such as Shane Bieber, Corbin Burnes, and Hunter Brown."
+    "objectID": "projects/arbitration.html#methodology",
+    "href": "projects/arbitration.html#methodology",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Methodology",
+    "text": "Methodology\nI used two complementary modeling approaches:\n\nOrdinary Least Squares (OLS) regression to estimate the relationship between performance metrics and arbitration salary.\nLASSO regularization to identify the most influential predictors and reduce model complexity.\n\nBoth models used first-year arbitration and Super-Two starting pitchers from 2016-2026."
   },
   {
-    "objectID": "projects/arbitration.html#baseball-interpretation",
-    "href": "projects/arbitration.html#baseball-interpretation",
-    "title": "MLB Arbitration OLS Model",
-    "section": "Baseball Interpretation",
-    "text": "Baseball Interpretation\nThe results suggest that first-year arbitration salaries still reward traditional indicators such as innings pitched and ERA.\nThis matters because arbitration is not just a pure projection system. It reflects performance, precedent, role, reputation, and comparable-player arguments."
+    "objectID": "projects/arbitration.html#regression-specification",
+    "href": "projects/arbitration.html#regression-specification",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Regression Specification",
+    "text": "Regression Specification\nI estimated an OLS regression using log salary as the dependent variable.\nlog(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ\nIndependent variables included:\n\nInnings Pitched (IP)\nStrikeout Rate (K%)\nWalk Rate (BB%)\nERA\nYear fixed effects\n\nThe logarithmic specification allows coefficients to be interpreted approximately as percentage changes in salary and helps address right-skewness in arbitration salary distributions.\nThe model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences."
   },
   {
-    "objectID": "projects/arbitration.html#limitations",
-    "href": "projects/arbitration.html#limitations",
-    "title": "MLB Arbitration OLS Model",
-    "section": "Limitations",
-    "text": "Limitations\nImportant omitted variables may include:\n\nWAR\nAwards\nInjuries\nRole changes\nReputation\nComparable-player effects\nTeam/player negotiation context"
+    "objectID": "projects/arbitration.html#lasso-variable-selection",
+    "href": "projects/arbitration.html#lasso-variable-selection",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "LASSO Variable Selection",
+    "text": "LASSO Variable Selection\nTo complement the OLS model, I applied LASSO regularization with cross-validation to identify the optimal penalty parameter (λ) and determine which variables consistently contribute to salary predictions.\nThe objective was to determine which pitching metrics consistently contributed to salary predictions while shrinking less informative variables toward zero."
+  },
+  {
+    "objectID": "projects/arbitration.html#model-findings",
+    "href": "projects/arbitration.html#model-findings",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Model Findings",
+    "text": "Model Findings\n\nInnings Pitched was the strongest predictor of first-year arbitration salary.\nERA remained a significant measure of run prevention and salary value.\nStrikeout rate retained predictive value after controlling for workload and ERA.\nWalk rate contributed less explanatory power than other performance metrics.\nLASSO variable selection confirmed innings pitched and ERA as the most influential predictors.\nSeason fixed effects captured changes in arbitration salary environments over time."
+  },
+  {
+    "objectID": "projects/arbitration.html#baseball-operations-application",
+    "href": "projects/arbitration.html#baseball-operations-application",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Baseball Operations Application",
+    "text": "Baseball Operations Application\nThis framework can be used to:\n\nEstimate expected arbitration salaries for eligible players.\nIdentify potentially overvalued and undervalued arbitration cases.\nSupport player acquisition and roster construction decisions.\nEvaluate comparable-player arguments used during negotiations.\nQuantify how traditional and modern performance metrics influence salary outcomes."
   },
   {
     "objectID": "projects/arbitration.html#next-steps",
@@ -117,6 +96,27 @@
     "title": "MLB Arbitration Salary Analysis",
     "section": "Download Full Presentation",
     "text": "Download Full Presentation"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "My resume summarizes my experience in baseball analytics, data science, economics, and research.\nDownload Resume\n\n\n\n\n\nBuilt R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis\n\n\n\n\n\n\nR\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
+  },
+  {
+    "objectID": "resume.html#selected-experience",
+    "href": "resume.html#selected-experience",
+    "title": "Resume",
+    "section": "",
+    "text": "Built R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis"
+  },
+  {
+    "objectID": "resume.html#technical-skills",
+    "href": "resume.html#technical-skills",
+    "title": "Resume",
+    "section": "",
+    "text": "R\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
   },
   {
     "objectID": "projects/pitcher-reports.html",
@@ -159,96 +159,5 @@
     "title": "TrackMan Scouting & Development Reports",
     "section": "Technical Stack",
     "text": "Technical Stack\nLanguages & Tools\n\nR\nQuarto\nTrackMan\n\nPackages\n\ndplyr\nggplot2\ngt\ntidyr\npurrr"
-  },
-  {
-    "objectID": "projects/arbitration.html#regression-specification",
-    "href": "projects/arbitration.html#regression-specification",
-    "title": "MLB Arbitration Salary Analysis",
-    "section": "Regression Specification",
-    "text": "Regression Specification\nI estimated an OLS regression using log salary as the dependent variable.\nlog(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ\nIndependent variables included:\n\nInnings Pitched (IP)\nStrikeout Rate (K%)\nWalk Rate (BB%)\nERA\nYear fixed effects\n\nThe logarithmic specification allows coefficients to be interpreted approximately as percentage changes in salary and helps address right-skewness in arbitration salary distributions.\nThe model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences."
-  },
-  {
-    "objectID": "projects/resume.html",
-    "href": "projects/resume.html",
-    "title": "Resume",
-    "section": "",
-    "text": "My resume summarizes my experience in baseball analytics, data science, economics, and research.\nDownload Resume\n\n\n\n\n\nBuilt R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis\n\n\n\n\n\n\nR\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
-  },
-  {
-    "objectID": "projects/resume.html#resume",
-    "href": "projects/resume.html#resume",
-    "title": "Resume",
-    "section": "",
-    "text": "My resume summarizes my experience in baseball analytics, data science, economics, and research.\n[Download Resume](files/Nicholas-Hutchison-Resume.pdf)\n\n## Selected Experience\n\n### Rutgers Baseball — Baseball Analytics Intern\n\n- Built R-based postgame pitching reports using TrackMan data\n- Created visualizations for pitch movement, velocity, spin, release consistency, and contact quality\n- Developed coach-facing summaries to support player evaluation and development\n\n### Baseball Research Intern — Foul Territory Network\n\n- Researched arbitration, free agency, Rule 5, and roster construction topics\n- Produced data-backed research notes for baseball media and analysis\n\n## Technical Skills\n\n- R\n- ggplot2\n- dplyr\n- Econometrics\n- Regression modeling\n- TrackMan data workflows"
-  },
-  {
-    "objectID": "projects/resume.html#selected-experience",
-    "href": "projects/resume.html#selected-experience",
-    "title": "Resume",
-    "section": "",
-    "text": "Built R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis"
-  },
-  {
-    "objectID": "projects/resume.html#technical-skills",
-    "href": "projects/resume.html#technical-skills",
-    "title": "Resume",
-    "section": "",
-    "text": "R\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
-  },
-  {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Resume",
-    "section": "",
-    "text": "My resume summarizes my experience in baseball analytics, data science, economics, and research.\nDownload Resume\n\n\n\n\n\nBuilt R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis\n\n\n\n\n\n\nR\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
-  },
-  {
-    "objectID": "resume.html#selected-experience",
-    "href": "resume.html#selected-experience",
-    "title": "Resume",
-    "section": "",
-    "text": "Built R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis"
-  },
-  {
-    "objectID": "resume.html#technical-skills",
-    "href": "resume.html#technical-skills",
-    "title": "Resume",
-    "section": "",
-    "text": "R\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
-  },
-  {
-    "objectID": "projects/arbitration.html#sample-summary",
-    "href": "projects/arbitration.html#sample-summary",
-    "title": "MLB Arbitration Salary Analysis",
-    "section": "Sample Summary",
-    "text": "Sample Summary\n\n124 first-year arbitration and Super-Two starting pitchers.\nSalary range: approximately $800K-$8M+.\nAverage Salary: $2.89M\nAverage Innings Pitched: 132.1\nAverage ERA: 3.96"
-  },
-  {
-    "objectID": "projects/arbitration.html#methodology",
-    "href": "projects/arbitration.html#methodology",
-    "title": "MLB Arbitration Salary Analysis",
-    "section": "Methodology",
-    "text": "Methodology\nI used two complementary modeling approaches:\n\nOrdinary Least Squares (OLS) regression to estimate the relationship between performance metrics and arbitration salary.\nLASSO regularization to identify the most influential predictors and reduce model complexity.\n\nBoth models used first-year arbitration and Super-Two starting pitchers from 2016-2026."
-  },
-  {
-    "objectID": "projects/arbitration.html#lasso-variable-selection",
-    "href": "projects/arbitration.html#lasso-variable-selection",
-    "title": "MLB Arbitration Salary Analysis",
-    "section": "LASSO Variable Selection",
-    "text": "LASSO Variable Selection\nTo complement the OLS model, I applied LASSO regularization with cross-validation to identify the optimal penalty parameter (λ) and determine which variables consistently contribute to salary predictions.\nThe objective was to determine which pitching metrics consistently contributed to salary predictions while shrinking less informative variables toward zero."
-  },
-  {
-    "objectID": "projects/arbitration.html#model-findings",
-    "href": "projects/arbitration.html#model-findings",
-    "title": "MLB Arbitration Salary Analysis",
-    "section": "Model Findings",
-    "text": "Model Findings\n\nInnings Pitched was the strongest predictor of first-year arbitration salary.\nERA remained a significant measure of run prevention and salary value.\nStrikeout rate retained predictive value after controlling for workload and ERA.\nWalk rate contributed less explanatory power than other performance metrics.\nLASSO variable selection confirmed innings pitched and ERA as the most influential predictors.\nSeason fixed effects captured changes in arbitration salary environments over time."
-  },
-  {
-    "objectID": "projects/arbitration.html#baseball-operations-application",
-    "href": "projects/arbitration.html#baseball-operations-application",
-    "title": "MLB Arbitration Salary Analysis",
-    "section": "Baseball Operations Application",
-    "text": "Baseball Operations Application\nThis framework can be used to:\n\nEstimate expected arbitration salaries for eligible players.\nIdentify potentially overvalued and undervalued arbitration cases.\nSupport player acquisition and roster construction decisions.\nEvaluate comparable-player arguments used during negotiations.\nQuantify how traditional and modern performance metrics influence salary outcomes."
   }
 ]
