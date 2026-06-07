@@ -12,7 +12,7 @@ website:
         text: Arbitration Research
       - href: projects/pitcher-reports.qmd
         text: Pitch Reports
-      - href: projects/resume.qmd
+      - href: resume.qmd
         text: Resume
 
 format:
