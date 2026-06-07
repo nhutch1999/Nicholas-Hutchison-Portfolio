@@ -14,8 +14,6 @@ website:
         text: Pitch Reports
       - href: projects/resume.qmd
         text: Resume
-      - href: about.qmd
-        text: About
 
 format:
   html:
