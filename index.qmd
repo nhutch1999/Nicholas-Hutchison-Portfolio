@@ -1,33 +1,35 @@
----
-title: "Nicholas Hutchison"
----
+- ::: {}
+  ---
+  title: "Nicholas Hutchison"
+  ---
 
-## Data Science + Economics | Rutgers Baseball Analytics
+  ## Data Science + Economics | Rutgers Baseball Analytics
 
-I build baseball analytics tools and research projects focused on player evaluation, pitcher development, and decision-making using R, econometrics, and TrackMan data.
+  I build baseball analytics tools and research projects focused on player evaluation, pitcher development, and decision-making using R, econometrics, and TrackMan data.
 
-## Areas of Focus:
+  ## Areas of Focus:
 
-- Baseball Operations & R&D
-- Pitcher development
-- Econometrics
-- Salary arbitration research
-- TrackMan analytics
-- Player evaluation
+  - Baseball Operations & R&D
+  - Pitcher development
+  - Econometrics
+  - Salary arbitration research
+  - TrackMan analytics
+  - Player evaluation
 
-## Featured Projects
+  ## Featured Projects
 
-### MLB Arbitration Salary Model
+  ### MLB Arbitration Salary Model
 
-Econometric model studying what drives first-year arbitration salaries for starting pitchers.
+  Econometric model studying what drives first-year arbitration salaries for starting pitchers.
 
-[View Project](projects/arbitration.qmd)
+  [View Project](projects/arbitration.qmd)
 
----
+  ---
 
-### Trackman Scouting & Development Reports
+  ### Trackman Scouting & Development Reports
 
-Automated pitcher reports using TrackMan data, including movement, velocity, spin, release consistency, run value, and contact quality.
+  Automated pitcher reports using TrackMan data, including movement, velocity, spin, release consistency, run value, and contact quality.
 
-[View Project](projects/pitcher-reports.qmd)
----
+  [View Project](projects/pitcher-reports.qmd)
+  ---
+  :::
