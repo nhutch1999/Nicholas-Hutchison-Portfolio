@@ -44,28 +44,28 @@
   {
     "objectID": "projects/arbitration.html",
     "href": "projects/arbitration.html",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "",
     "text": "What drives first-year MLB arbitration salaries for starting pitchers?"
   },
   {
     "objectID": "projects/arbitration.html#research-question",
     "href": "projects/arbitration.html#research-question",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "",
     "text": "What drives first-year MLB arbitration salaries for starting pitchers?"
   },
   {
     "objectID": "projects/arbitration.html#project-overview",
     "href": "projects/arbitration.html#project-overview",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "Project Overview",
     "text": "Project Overview\nThis project uses arbitration salary data and pitching performance metrics to estimate which factors most influence first-year arbitration salaries.\nThe goal is to connect econometric modeling with a real baseball operations question: how players are valued during the arbitration process."
   },
   {
     "objectID": "projects/arbitration.html#data",
     "href": "projects/arbitration.html#data",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "Data",
     "text": "Data\n\nSalary data: Spotrac\nPerformance data: Fangraphs / Statcast\nSample: First-year arbitration and Super Two starting pitchers\nYears: 2016–2026\nObservations: 124 pitchers"
   },
@@ -100,21 +100,21 @@
   {
     "objectID": "projects/arbitration.html#next-steps",
     "href": "projects/arbitration.html#next-steps",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "Next Steps",
-    "text": "Next Steps\nFuture versions of this project could:\n\nAdd WAR and advanced metrics\nCompare traditional vs modern statistics\nUse LASSO to evaluate variable selection\nAnalyze residuals to identify overpaid and underpaid arbitration cases\nBuild comparable-player groups"
+    "text": "Next Steps\nFuture work will focus on:\n\nResidual Analysis to identify overpaid and underpaid arbitration outcomes.\nBuilding comparable-player groups for arbitration forecasting.\nExpanding the predictor set to include metrics such as WAR and Stuff+.\nCompare linear models with machine learning approaches such as Random Forests and Gradient Boosting."
   },
   {
     "objectID": "projects/arbitration.html#full-presentation",
     "href": "projects/arbitration.html#full-presentation",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "Full Presentation",
     "text": "Full Presentation"
   },
   {
     "objectID": "projects/arbitration.html#download-full-presentation",
     "href": "projects/arbitration.html#download-full-presentation",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "Download Full Presentation",
     "text": "Download Full Presentation"
   },
@@ -163,9 +163,9 @@
   {
     "objectID": "projects/arbitration.html#regression-specification",
     "href": "projects/arbitration.html#regression-specification",
-    "title": "MLB Arbitration OLS Model",
+    "title": "MLB Arbitration Salary Analysis",
     "section": "Regression Specification",
-    "text": "Regression Specification\nlog(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ"
+    "text": "Regression Specification\nI estimated an OLS regression using log salary as the dependent variable.\nlog(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ\nIndependent variables included:\n\nInnings Pitched (IP)\nStrikeout Rate (K%)\nWalk Rate (BB%)\nERA\nYear fixed effects\n\nThe logarithmic specification allows coefficients to be interpreted approximately as percentage changes in salary and helps address right-skewness in arbitration salary distributions.\nThe model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences."
   },
   {
     "objectID": "projects/resume.html",
@@ -215,5 +215,40 @@
     "title": "Resume",
     "section": "",
     "text": "R\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
+  },
+  {
+    "objectID": "projects/arbitration.html#sample-summary",
+    "href": "projects/arbitration.html#sample-summary",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Sample Summary",
+    "text": "Sample Summary\n\n124 first-year arbitration and Super-Two starting pitchers.\nSalary range: approximately $800K-$8M+.\nAverage Salary: $2.89M\nAverage Innings Pitched: 132.1\nAverage ERA: 3.96"
+  },
+  {
+    "objectID": "projects/arbitration.html#methodology",
+    "href": "projects/arbitration.html#methodology",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Methodology",
+    "text": "Methodology\nI used two complementary modeling approaches:\n\nOrdinary Least Squares (OLS) regression to estimate the relationship between performance metrics and arbitration salary.\nLASSO regularization to identify the most influential predictors and reduce model complexity.\n\nBoth models used first-year arbitration and Super-Two starting pitchers from 2016-2026."
+  },
+  {
+    "objectID": "projects/arbitration.html#lasso-variable-selection",
+    "href": "projects/arbitration.html#lasso-variable-selection",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "LASSO Variable Selection",
+    "text": "LASSO Variable Selection\nTo complement the OLS model, I applied LASSO regularization with cross-validation to identify the optimal penalty parameter (λ) and determine which variables consistently contribute to salary predictions.\nThe objective was to determine which pitching metrics consistently contributed to salary predictions while shrinking less informative variables toward zero."
+  },
+  {
+    "objectID": "projects/arbitration.html#model-findings",
+    "href": "projects/arbitration.html#model-findings",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Model Findings",
+    "text": "Model Findings\n\nInnings Pitched was the strongest predictor of first-year arbitration salary.\nERA remained a significant measure of run prevention and salary value.\nStrikeout rate retained predictive value after controlling for workload and ERA.\nWalk rate contributed less explanatory power than other performance metrics.\nLASSO variable selection confirmed innings pitched and ERA as the most influential predictors.\nSeason fixed effects captured changes in arbitration salary environments over time."
+  },
+  {
+    "objectID": "projects/arbitration.html#baseball-operations-application",
+    "href": "projects/arbitration.html#baseball-operations-application",
+    "title": "MLB Arbitration Salary Analysis",
+    "section": "Baseball Operations Application",
+    "text": "Baseball Operations Application\nThis framework can be used to:\n\nEstimate expected arbitration salaries for eligible players.\nIdentify potentially overvalued and undervalued arbitration cases.\nSupport player acquisition and roster construction decisions.\nEvaluate comparable-player arguments used during negotiations.\nQuantify how traditional and modern performance metrics influence salary outcomes."
   }
 ]

@@ -1,5 +1,5 @@
 ---
-title: "MLB Arbitration OLS Model"
+title: "MLB Arbitration Salary Analysis"
 ---
 
 ## Research Question
@@ -20,9 +20,33 @@ The goal is to connect econometric modeling with a real baseball operations ques
 - Years: 2016–2026
 - Observations: 124 pitchers
 
-## Model
+## Sample Summary
+
+- 124 first-year arbitration and Super-Two starting pitchers.
+
+- Salary range: approximately \$800K-\$8M+.
+
+- Average Salary: \$2.89M
+
+- Average Innings Pitched: 132.1
+
+- Average ERA: 3.96
+
+## Methodology
+
+I used two complementary modeling approaches:
+
+- Ordinary Least Squares (OLS) regression to estimate the relationship between performance metrics and arbitration salary.
+
+- LASSO regularization to identify the most influential predictors and reduce model complexity.
+
+Both models used first-year arbitration and Super-Two starting pitchers from 2016-2026.
+
+## Regression Specification
 
 I estimated an OLS regression using log salary as the dependent variable.
+
+log(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ
 
 Independent variables included:
 
@@ -36,46 +60,43 @@ The logarithmic specification allows coefficients to be interpreted approximatel
 
 The model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences.
 
-## Regression Specification
+## LASSO Variable Selection
 
-log(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ
+To complement the OLS model, I applied LASSO regularization with cross-validation to identify the optimal penalty parameter (λ) and determine which variables consistently contribute to salary predictions.
 
-## Key Findings
+The objective was to determine which pitching metrics consistently contributed to salary predictions while shrinking less informative variables toward zero.
 
-- Workload was strongly rewarded in arbitration.
-- 10 additional innings pitched were associated with roughly a 5.8% increase in salary.
-- ERA remained highly influential.
-- One additional run of ERA was associated with roughly an 11% decrease in salary.
-- Strikeout rate showed moderate evidence of positive salary impact.
-- The model underpredicted elite performers such as Shane Bieber, Corbin Burnes, and Hunter Brown.
+## Model Findings
 
-## Baseball Interpretation
+- Innings Pitched was the strongest predictor of first-year arbitration salary.
+- ERA remained a significant measure of run prevention and salary value.
+- Strikeout rate retained predictive value after controlling for workload and ERA.
+- Walk rate contributed less explanatory power than other performance metrics.
+- LASSO variable selection confirmed innings pitched and ERA as the most influential predictors.
+- Season fixed effects captured changes in arbitration salary environments over time.
 
-The results suggest that first-year arbitration salaries still reward traditional indicators such as innings pitched and ERA.
+## Baseball Operations Application
 
-This matters because arbitration is not just a pure projection system. It reflects performance, precedent, role, reputation, and comparable-player arguments.
+This framework can be used to:
 
-## Limitations
+- Estimate expected arbitration salaries for eligible players.
 
-Important omitted variables may include:
+- Identify potentially overvalued and undervalued arbitration cases.
 
-- WAR
-- Awards
-- Injuries
-- Role changes
-- Reputation
-- Comparable-player effects
-- Team/player negotiation context
+- Support player acquisition and roster construction decisions.
+
+- Evaluate comparable-player arguments used during negotiations.
+
+- Quantify how traditional and modern performance metrics influence salary outcomes.
 
 ## Next Steps
 
-Future versions of this project could:
+Future work will focus on:
 
-- Add WAR and advanced metrics
-- Compare traditional vs modern statistics
-- Use LASSO to evaluate variable selection
-- Analyze residuals to identify overpaid and underpaid arbitration cases
-- Build comparable-player groups
+- Residual Analysis to identify overpaid and underpaid arbitration outcomes.
+- Building comparable-player groups for arbitration forecasting.
+- Expanding the predictor set to include metrics such as WAR and Stuff+.
+- Compare linear models with machine learning approaches such as Random Forests and Gradient Boosting.
 
 ## Full Presentation
 

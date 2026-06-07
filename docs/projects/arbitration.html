@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>MLB Arbitration OLS Model – Nicholas Hutchison</title>
+<title>MLB Arbitration Salary Analysis – Nicholas Hutchison</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -126,11 +126,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#research-question" id="toc-research-question" class="nav-link active" data-scroll-target="#research-question">Research Question</a></li>
   <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
   <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
-  <li><a href="#model" id="toc-model" class="nav-link" data-scroll-target="#model">Model</a></li>
+  <li><a href="#sample-summary" id="toc-sample-summary" class="nav-link" data-scroll-target="#sample-summary">Sample Summary</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
   <li><a href="#regression-specification" id="toc-regression-specification" class="nav-link" data-scroll-target="#regression-specification">Regression Specification</a></li>
-  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings">Key Findings</a></li>
-  <li><a href="#baseball-interpretation" id="toc-baseball-interpretation" class="nav-link" data-scroll-target="#baseball-interpretation">Baseball Interpretation</a></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
+  <li><a href="#lasso-variable-selection" id="toc-lasso-variable-selection" class="nav-link" data-scroll-target="#lasso-variable-selection">LASSO Variable Selection</a></li>
+  <li><a href="#model-findings" id="toc-model-findings" class="nav-link" data-scroll-target="#model-findings">Model Findings</a></li>
+  <li><a href="#baseball-operations-application" id="toc-baseball-operations-application" class="nav-link" data-scroll-target="#baseball-operations-application">Baseball Operations Application</a></li>
   <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
   <li><a href="#full-presentation" id="toc-full-presentation" class="nav-link" data-scroll-target="#full-presentation">Full Presentation</a></li>
   <li><a href="#download-full-presentation" id="toc-download-full-presentation" class="nav-link" data-scroll-target="#download-full-presentation">Download Full Presentation</a></li>
@@ -142,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MLB Arbitration OLS Model</h1>
+<h1 class="title">MLB Arbitration Salary Analysis</h1>
 </div>
 
 
@@ -178,9 +179,29 @@ ul.task-list li input[type="checkbox"] {
 <li>Observations: 124 pitchers</li>
 </ul>
 </section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Model</h2>
+<section id="sample-summary" class="level2">
+<h2 class="anchored" data-anchor-id="sample-summary">Sample Summary</h2>
+<ul>
+<li><p>124 first-year arbitration and Super-Two starting pitchers.</p></li>
+<li><p>Salary range: approximately $800K-$8M+.</p></li>
+<li><p>Average Salary: $2.89M</p></li>
+<li><p>Average Innings Pitched: 132.1</p></li>
+<li><p>Average ERA: 3.96</p></li>
+</ul>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>I used two complementary modeling approaches:</p>
+<ul>
+<li><p>Ordinary Least Squares (OLS) regression to estimate the relationship between performance metrics and arbitration salary.</p></li>
+<li><p>LASSO regularization to identify the most influential predictors and reduce model complexity.</p></li>
+</ul>
+<p>Both models used first-year arbitration and Super-Two starting pitchers from 2016-2026.</p>
+</section>
+<section id="regression-specification" class="level2">
+<h2 class="anchored" data-anchor-id="regression-specification">Regression Specification</h2>
 <p>I estimated an OLS regression using log salary as the dependent variable.</p>
+<p>log(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ</p>
 <p>Independent variables included:</p>
 <ul>
 <li>Innings Pitched (IP)</li>
@@ -192,48 +213,41 @@ ul.task-list li input[type="checkbox"] {
 <p>The logarithmic specification allows coefficients to be interpreted approximately as percentage changes in salary and helps address right-skewness in arbitration salary distributions.</p>
 <p>The model estimated how pitcher performance metrics were associated with arbitration outcomes while controlling for season-level differences.</p>
 </section>
-<section id="regression-specification" class="level2">
-<h2 class="anchored" data-anchor-id="regression-specification">Regression Specification</h2>
-<p>log(Salaryᵢ) = β₀ + β₁(IP/10)ᵢ + β₂K%ᵢ + β₃BB%ᵢ + β₄ERAᵢ + δₜ + uᵢ</p>
+<section id="lasso-variable-selection" class="level2">
+<h2 class="anchored" data-anchor-id="lasso-variable-selection">LASSO Variable Selection</h2>
+<p>To complement the OLS model, I applied LASSO regularization with cross-validation to identify the optimal penalty parameter (λ) and determine which variables consistently contribute to salary predictions.</p>
+<p>The objective was to determine which pitching metrics consistently contributed to salary predictions while shrinking less informative variables toward zero.</p>
 </section>
-<section id="key-findings" class="level2">
-<h2 class="anchored" data-anchor-id="key-findings">Key Findings</h2>
+<section id="model-findings" class="level2">
+<h2 class="anchored" data-anchor-id="model-findings">Model Findings</h2>
 <ul>
-<li>Workload was strongly rewarded in arbitration.</li>
-<li>10 additional innings pitched were associated with roughly a 5.8% increase in salary.</li>
-<li>ERA remained highly influential.</li>
-<li>One additional run of ERA was associated with roughly an 11% decrease in salary.</li>
-<li>Strikeout rate showed moderate evidence of positive salary impact.</li>
-<li>The model underpredicted elite performers such as Shane Bieber, Corbin Burnes, and Hunter Brown.</li>
+<li>Innings Pitched was the strongest predictor of first-year arbitration salary.</li>
+<li>ERA remained a significant measure of run prevention and salary value.</li>
+<li>Strikeout rate retained predictive value after controlling for workload and ERA.</li>
+<li>Walk rate contributed less explanatory power than other performance metrics.</li>
+<li>LASSO variable selection confirmed innings pitched and ERA as the most influential predictors.</li>
+<li>Season fixed effects captured changes in arbitration salary environments over time.</li>
 </ul>
 </section>
-<section id="baseball-interpretation" class="level2">
-<h2 class="anchored" data-anchor-id="baseball-interpretation">Baseball Interpretation</h2>
-<p>The results suggest that first-year arbitration salaries still reward traditional indicators such as innings pitched and ERA.</p>
-<p>This matters because arbitration is not just a pure projection system. It reflects performance, precedent, role, reputation, and comparable-player arguments.</p>
-</section>
-<section id="limitations" class="level2">
-<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
-<p>Important omitted variables may include:</p>
+<section id="baseball-operations-application" class="level2">
+<h2 class="anchored" data-anchor-id="baseball-operations-application">Baseball Operations Application</h2>
+<p>This framework can be used to:</p>
 <ul>
-<li>WAR</li>
-<li>Awards</li>
-<li>Injuries</li>
-<li>Role changes</li>
-<li>Reputation</li>
-<li>Comparable-player effects</li>
-<li>Team/player negotiation context</li>
+<li><p>Estimate expected arbitration salaries for eligible players.</p></li>
+<li><p>Identify potentially overvalued and undervalued arbitration cases.</p></li>
+<li><p>Support player acquisition and roster construction decisions.</p></li>
+<li><p>Evaluate comparable-player arguments used during negotiations.</p></li>
+<li><p>Quantify how traditional and modern performance metrics influence salary outcomes.</p></li>
 </ul>
 </section>
 <section id="next-steps" class="level2">
 <h2 class="anchored" data-anchor-id="next-steps">Next Steps</h2>
-<p>Future versions of this project could:</p>
+<p>Future work will focus on:</p>
 <ul>
-<li>Add WAR and advanced metrics</li>
-<li>Compare traditional vs modern statistics</li>
-<li>Use LASSO to evaluate variable selection</li>
-<li>Analyze residuals to identify overpaid and underpaid arbitration cases</li>
-<li>Build comparable-player groups</li>
+<li>Residual Analysis to identify overpaid and underpaid arbitration outcomes.</li>
+<li>Building comparable-player groups for arbitration forecasting.</li>
+<li>Expanding the predictor set to include metrics such as WAR and Stuff+.</li>
+<li>Compare linear models with machine learning approaches such as Random Forests and Gradient Boosting.</li>
 </ul>
 </section>
 <section id="full-presentation" class="level2">
