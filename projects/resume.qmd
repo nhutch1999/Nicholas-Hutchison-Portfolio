@@ -1,0 +1,31 @@
+---
+title: "Resume"
+---
+
+# Resume
+
+My resume summarizes my experience in baseball analytics, data science, economics, and research.
+
+[Download Resume](files/Nicholas-Hutchison-Resume.pdf)
+
+## Selected Experience
+
+### Rutgers Baseball — Baseball Analytics Intern
+
+- Built R-based postgame pitching reports using TrackMan data
+- Created visualizations for pitch movement, velocity, spin, release consistency, and contact quality
+- Developed coach-facing summaries to support player evaluation and development
+
+### Baseball Research Intern — Foul Territory Network
+
+- Researched arbitration, free agency, Rule 5, and roster construction topics
+- Produced data-backed research notes for baseball media and analysis
+
+## Technical Skills
+
+- R
+- ggplot2
+- dplyr
+- Econometrics
+- Regression modeling
+- TrackMan data workflows
