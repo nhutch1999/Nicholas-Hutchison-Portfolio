@@ -102,21 +102,21 @@
     "href": "resume.html",
     "title": "Resume",
     "section": "",
-    "text": "My resume summarizes my experience in baseball analytics, data science, economics, and research.\nDownload Resume\n\n\n\n\n\nBuilt R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis\n\n\n\n\n\n\nR\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
+    "text": "My resume summarizes my experience in baseball analytics, data science, economics, and research.\nDownload Resume"
   },
   {
     "objectID": "resume.html#selected-experience",
     "href": "resume.html#selected-experience",
     "title": "Resume",
-    "section": "",
-    "text": "Built R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\n\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis"
+    "section": "Selected Experience",
+    "text": "Selected Experience\n\nRutgers Baseball — Baseball Analytics Intern\n\nBuilt R-based postgame pitching reports using TrackMan data\nCreated visualizations for pitch movement, velocity, spin, release consistency, and contact quality\nDeveloped coach-facing summaries to support player evaluation and development\n\n\n\nBaseball Research Intern — Foul Territory Network\n\nResearched arbitration, free agency, Rule 5, and roster construction topics\nProduced data-backed research notes for baseball media and analysis"
   },
   {
     "objectID": "resume.html#technical-skills",
     "href": "resume.html#technical-skills",
     "title": "Resume",
-    "section": "",
-    "text": "R\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
+    "section": "Technical Skills",
+    "text": "Technical Skills\n\nR\nggplot2\ndplyr\nEconometrics\nRegression modeling\nTrackMan data workflows"
   },
   {
     "objectID": "projects/pitcher-reports.html",

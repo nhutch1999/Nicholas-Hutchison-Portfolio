@@ -2,8 +2,6 @@
 title: "Resume"
 ---
 
-# Resume
-
 My resume summarizes my experience in baseball analytics, data science, economics, and research.
 
 [Download Resume](files/Nicholas-Hutchison-Resume.pdf)
